@@ -15,8 +15,10 @@ app.set('views', path.join(__dirname+"/views"));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
-const port = 554;
-const ip = "localhost";
+// const port = 554;
+// const ip = "localhost";
+const port = 80;
+const ip = "121.170.91.63";
 const server = app.listen(port, ip, function() {
     console.log("||-------TTL Server------||");
     console.log("Server started!!");
