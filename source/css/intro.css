@@ -1,0 +1,129 @@
+.wrap {
+    width: 100%;
+    height: 100%;
+    background: url('images/mainbg.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.mainbox {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 40%;
+    min-height: 500px;
+}
+
+#imgw {
+    width: 400px;
+}
+
+.m1 {
+    font-size: 14px;
+    font-family: "AppleSDGothicNeoUL00";
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+    text-align: center;
+}
+
+.m2 {
+    font-family: "AppleSDGothicNeoM00";
+    font-size: 20px;
+    line-height: 1.95;
+}
+
+.button {
+    width: 400px;
+    height: 70px;
+    background: transparent;
+    color:white;
+    border: solid 3px white;
+    border-radius: 46px;
+    font-family: "AppleSDGothicNeoM00";
+    font-size: 31px;
+    line-height: 1.9;
+}
+.button:hover{
+    box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.6);
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+#f {
+    width: 21px;
+    height: 21px;
+    margin-right: 5px;
+}
+
+.messagebox {
+    display: none;
+    flex-flow: column;
+    margin-right: 4%;
+}
+
+.cbox > * {
+    text-align: right;
+}
+
+.eng {
+    font-size: 54px;
+    line-height: 1.48;
+    letter-spacing: 2.2px;
+    font-family: 'XHARP Gradient';
+}
+
+.kor {
+    font-family: "AppleSDGothicNeoT00";
+    line-height: 1.89;
+    font-size: 19px;
+    margin-top: 43px;
+}
+
+@media (min-width:768px) and (max-width:1440px) {
+    .messagebox {
+        height: 40%;
+    }
+
+    #imgw {
+        width: 500px;
+    }
+
+    .m1 {
+        font-size: 20px;
+    }
+
+    .m2 {
+        font-size: 25px;
+    }
+
+    .button {
+        width: 500px;
+        height: 75px;
+        background: transparent;
+        border: solid 3px white;
+        border-radius: 46px;
+        font-family: "AppleSDGothicNeoM00";
+        font-size: 35px;
+        line-height: 1.9;
+    }
+
+    #f {
+        width: 21px;
+        height: 21px;
+        margin-right: 5px;
+    }
+}
+
+@media (min-width:1440px) {
+    .mainbox {
+        width: 45%;
+    }
+
+    .messagebox {
+        display: flex;
+        width: 55%;
+    }
+}

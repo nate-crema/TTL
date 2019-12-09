@@ -1,0 +1,269 @@
+@font-face {
+    font-family: "AppleSDGothicNeoB00";
+    src: url(fonts/AppleSDGothicNeoB.ttf);
+    font-family: "AppleSDGothicNeoEB00";
+    src: url(fonts/AppleSDGothicNeoEB.ttf);
+    font-family: "AppleSDGothicNeoH00";
+    src: url(fonts/AppleSDGothicNeoH.ttf);
+    font-family: "AppleSDGothicNeoL00";
+    src: url(fonts/AppleSDGothicNeoL.ttf);
+    font-family: "AppleSDGothicNeoM00";
+    src: url(fonts/AppleSDGothicNeoM.ttf);
+    font-family: "AppleSDGothicNeoR00";
+    src: url(fonts/AppleSDGothicNeoR.ttf);
+    font-family: "AppleSDGothicNeoSB00";
+    src: url(fonts/AppleSDGothicNeoSB.ttf);
+    font-family: "AppleSDGothicNeoT00";
+    src: url(fonts/AppleSDGothicNeoT.ttf);
+    font-family: "AppleSDGothicNeoUL00";
+    src: url(fonts/AppleSDGothicNeoUL.ttf);
+    font-family: "XHARP Gradient";
+    src: url(fonts/xharp.gradient.otf);
+    font-family: "XHARP";
+    src: url(fonts/xharp.regular.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.left {
+    flex-basis: 492px;
+    height: 100%;
+}
+
+.head {
+    height: 30%;
+    background: url(images/mixer.png) no-repeat center center;
+    background-size: 120% 120%;
+    position: relative;
+    z-index: -2;
+    display: flex;
+    justify-content: center;
+}
+
+.clr {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.57;
+    background-color: #1f0037;
+    z-index: -1;
+}
+
+.head img {
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    bottom: 60px;
+}
+
+.head p {
+    font-family: "AppleSDGothicNeoUL00";
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 7.4px;
+    position: absolute;
+    bottom: 0;
+}
+
+.mid {
+    height: 70%;
+    position: relative;
+    min-height: 600px;
+}
+
+.bx {
+    margin-left: 45px;
+}
+
+.bx h1 {
+    font-family: "AppleSDGothicNeoH00";
+    font-size: 33px;
+    line-height: 1.97;
+    letter-spacing: 1.4px;
+    color: #fd367e;
+    padding-top: 45px;
+}
+
+.bx p {
+    font-family: "AppleSDGothicNeoM00";
+    font-size: 19px;
+    letter-spacing: 0.8px;
+    color: #707070;
+    padding-top: 20px;
+}
+a{
+    text-decoration: none;
+    color: #707070;
+}
+#now {
+    font-family: "AppleSDGothicNeoH00";
+    color: #17132b;
+}
+
+.lgout {
+    position: absolute;
+    right: 29px;
+    bottom: 104px;
+    font-family: "AppleSDGothicNeoM00";
+    font-size: 22px;
+    line-height: 1.59;
+    background-color: transparent;
+    color: #fd367e;
+    border: none;
+    border-bottom: 2px solid #fd367e;
+}
+
+.player {
+    position: fixed;
+    bottom: 0;
+}
+
+.right {
+    flex-basis: 1428px;
+    height: 100%;
+    background-color: #17132b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.albx {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    min-width:850px;
+    height: 90%;
+    position: relative;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    
+}
+.albx::-webkit-scrollbar {
+        display: none;
+    }
+.in_l {
+    display: flex;
+    flex-basis: 33.333333%;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.in_l > * {
+    width: 250px;
+    display:inline-block;
+    text-align: center;
+}
+
+.in_l p {
+    font-family: "AppleSDGothicNeoEB00";
+    font-size: 18px;
+    margin-top: 21px;
+}
+
+.in_l h1 {
+    font-family: "XHARP";
+    font-size: 34px;
+}
+
+
+.l_b img {
+    width: 24px;
+    margin-right: 5px;
+}
+
+.l_b {
+    display: flex;
+    margin-top: 20px;
+    justify-content:center;
+    align-items: center;
+}
+
+.l_b p {
+    font-family: "AppleSDGothicNeoM00";
+    font-size: 18px;
+    height: 21px;
+    margin-top: 0;
+}
+.in_l>img:hover,a:hover,.l_b:hover{
+    cursor:pointer;
+}
+#buy{
+    background-color:aquamarine;
+    position:absolute;
+    width:500px;
+    height:500px;
+    text-align: center;
+    font-family: "AppleSDGothicNeoEB00";
+    font-size: 18px;
+    left:50%;
+    margin-left:-250px;
+    top:50%;
+    margin-top:-250px;
+    background-color: #18202a;
+    border-radius:50px;
+    display:none;
+}
+.bcon{
+    margin-top:80px;
+    height:300px;
+}
+.form{
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+.button{
+    background-color:black;
+    border:2px solid white;
+    border-radius:25px;
+    width:120px;
+    height:50px;
+    color:white;
+}
+input{
+    font-family: "AppleSDGothicNeoM00";
+    color:black;
+    font-size:25px;
+    margin-top:20px;
+}
+#out{
+    background-color:black;
+    border:none;
+    width:50px;
+    height:50px;
+    font-size:30px;
+    border-radius:25px;
+    font-weight: 600;
+    font-family: "AppleSDGothicNeoSB00";
+    position:absolute;
+    right:50px;
+    top:50px;
+}
+.button:hover,#out:hover{
+    cursor:pointer;
+    background-color:white;
+    color:black;
+}
+.checkbox{
+    display:flex;
+    width:100%;
+    justify-content:space-around;
+}

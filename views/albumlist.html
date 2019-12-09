@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title>TTL</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/albumlist.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var audio = new Audio();
+        audio.src = "/css/TTLAND/01.mp3";
+        audio.play();
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="left">
+            <div class="head">
+                <div class="clr"></div>
+                <img src="/css/images/ttlLogo3.png">
+                <p>한국디지털미디어고등학교 유일 미디작곡 동아리</p>
+            </div>
+            <div class="mid">
+                <div class="bx">
+                    <h1>TTL NEWS</h1>
+                    <p><a onclick="notyet()">preview</a></p>
+                    <p><a onclick="notyet()">event</a></p>
+                </div>
+                <div class="bx">
+                    <h1>TTL MUSIC</h1>
+                    <p>    <a href="/album" style="color:black">Album</a></p>
+                    <p id="now"><a href="/albumlist" style="color:black">AlbumList</a></p>
+                    <p><a href="https://soundcloud.com/user-934936304" style="color:black">SoundCloud</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="album">
+            </div>
+            <hr>
+            <div class="album">
+            </div>
+            <hr>
+            <div class="album">
+            </div>
+        </div>
+    </div>
+    <script>
+        function notyet() {
+            alert('아직 제공하지 않는 서비스입니다...');
+        }
+        var z = document.getElementsByClassName('album');
+        for (var i = 0; i < z.length; i++) {
+            z[i].innerHTML += `
+                <div class="in_l">
+                </div>
+                <div class="in_r">
+                    <div class="lst">
+                    </div>
+                    <div class="lst">
+                    </div>
+                </div>`;
+        }
+
+        var x = document.getElementsByClassName('in_l');
+        for (var i = 0; i < x.length; i++) {
+            x[i].innerHTML += `
+                       <img src="/css/images/ttland.png">
+                       <p>TTL 정규 6집 앨범</p>
+                       <h1>TTLAND</h1>
+                       <div class="l_b">
+                               <img src="/css/images/shopping-cart.png">
+                               <p>purchase</p>
+                       </div>`;
+        }
+        var y = document.getElementsByClassName('lst');
+        for (var i = 0; i < y.length; i++) {
+            y[i].innerHTML += `
+               <ul>
+                            <li><span id="num">1</span><span id="title">Intro:Sink of Swim</span><span>딴따라 정규 7집 앨범</span></li>
+                            <li><span id="num">2</span><span id="title">Hey you</span><span>강다영(feat.우수진)</span></li>
+                            <li><span id="num">3</span><span id="title">Gentlmen</span><span>오새찬,이종훈(feat.김은상)</span></li>
+                            <li><span id="num">4</span><span id="title">Dial</span><span>김강휘,김우일,최승우</span></li>
+                            <li><span id="num">5</span><span id="title">光(광)</span><span>이종훈,김강휘,왕태규</span></li>
+                            <li><span id="num">6</span><span id="title">Between</span><span>명예진,김우일(feat.최승우)</span></li>
+                            <li><span id="num">7</span><span id="title">Wave</span><span>강다영,왕태규(feat.김은지)</span></li>
+                            <li><span id="num">8</span><span id="title">Fall in Love</span><span>송지현</span></li>
+                            <li><span id="num">9</span><span id="title">.5</span><span>이종훈,김강휘,왕태규</span></li>
+                            <li><span id="num">10</span><span id="title">AGIT</span><span>우수진,이채영</span></li>
+                        </ul>`;
+        }
+
+    </script>
+</body>
+
+</html>

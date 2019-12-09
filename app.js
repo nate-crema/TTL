@@ -4,11 +4,18 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const fs = require("fs");
 const axios = require("axios");
-const getIP = require("ipware")().get_ip();
+const crypto = require("crypto");
+var getIP = require('ipware')().get_ip;
 
 const app = express();
 
-const port = 80;
+
+
+app.set('views', path.join(__dirname+"/views"));
+app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
+
+const port = 554;
 const ip = "localhost";
 const server = app.listen(port, ip, function() {
     console.log("||-------TTL Server------||");
@@ -52,8 +59,8 @@ const time = ''+new Date().getFullYear()+month+date + '-' + hour+minute+second;
 app.use((req, res, next) => {
     const ipInfo = getIP(req);
     console.log("---------\n\nAccessed: " + ipInfo.clientIp + "\n Time: " + time + "\n\n----------\n\n\n");
+    next();
 });
-
 
 app.use(express.static(__dirname + "/source"));
 app.use(bodyParser.json());
@@ -71,7 +78,7 @@ app.use(session({
 
 //mongodb
 
-var pre_model = require('./models/pre_model');
+var preorder = require('./models/pre_order');
 
 var mongoose = require('mongoose');
 
@@ -81,7 +88,7 @@ db.once('open', function() {
     console.log("Mongodb: connected");
 })
 
-mongoose.connect('mongodb://121.170.91.63:754', { dbName: 'TTL_pre'});
+mongoose.connect('mongodb://121.170.91.63', { dbName: 'TTL_pre'});
 
 //Router
-var router = require('./router')(app, fs, path, crypto, pre_model);
+var router = require('./router')(app, fs, path, crypto, preorder, getIP);

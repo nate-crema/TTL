@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "AppleSDGothicNeoB00";
+    src: url(fonts/AppleSDGothicNeoB.ttf);
+    font-family: "AppleSDGothicNeoEB00";
+    src: url(fonts/AppleSDGothicNeoEB.ttf);
+    font-family: "AppleSDGothicNeoH00";
+    src: url(fonts/AppleSDGothicNeoH.ttf);
+    font-family: "AppleSDGothicNeoL00";
+    src: url(fonts/AppleSDGothicNeoL.ttf);
+    font-family: "AppleSDGothicNeoM00";
+    src: url(fonts/AppleSDGothicNeoM.ttf);
+    font-family: "AppleSDGothicNeoR00";
+    src: url(fonts/AppleSDGothicNeoR.ttf);
+    font-family: "AppleSDGothicNeoSB00";
+    src: url(fonts/AppleSDGothicNeoSB.ttf);
+    font-family: "AppleSDGothicNeoT00";
+    src: url(fonts/AppleSDGothicNeoT.ttf);
+    font-family: "AppleSDGothicNeoUL00";
+    src: url(fonts/AppleSDGothicNeoUL.ttf);
+    font-family: "XHARP Gradient";
+    src: url(fonts/xharp.gradient.otf);
+    font-family: "XHARP";
+    src: url(fonts/xharp.regular.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    color: black;
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    background: url('images/mainbg.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.wrap2 {
+    width: 734px;
+    height: 100%;
+    background-color: white;
+    position: relative;
+    overflow-y: scroll;
+}
+
+.fbox {
+    margin-top: 9%;
+    min-height: 700px;
+    height: 65%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#imgw {
+    width: 352px;
+}
+
+.m1 {
+    font-size: 14px;
+    font-family: "AppleSDGothicNeoUL00";
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+    text-align: center;
+}
+
+.bx h1 {
+    font-family: "AppleSDGothicNeoH00";
+    font-size: 33px;
+    line-height: 1.97;
+    letter-spacing: 1.4px;
+    color: #fd367e;
+}
+
+.bx p {
+    font-family: "AppleSDGothicNeoM00";
+    font-size: 19px;
+    line-height: 3.42;
+    letter-spacing: 0.8px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #707070;
+}
+
+.usr {
+    position: absolute;
+    color: #707070;
+    top: 910px;
+    left: 30px;
+    font-family: "AppleSDGothicNeoM00";
+    font-size: 22px;
+    letter-spacing: 0.9px;
+
+}
+
+.lgout {
+    position: absolute;
+    right: 30px;
+    top:910px;
+    font-family: "AppleSDGothicNeoM00";
+    font-size: 22px;
+    line-height: 1.3;
+    background-color: transparent;
+    color: #fd367e;
+    border: none;
+    border-bottom: 2px solid #fd367e;
+}
+.lgout:hover,a:hover{
+    cursor:pointer;
+}

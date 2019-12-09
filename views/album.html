@@ -1,0 +1,152 @@
+<html>
+
+<head>
+    <title>TTL</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/album.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="left">
+            <div class="head">
+                <div class="clr"></div>
+                <img src="/css/images/ttlLogo3.png">
+                <p>한국디지털미디어고등학교 유일 미디작곡 동아리</p>
+            </div>
+            <div class="mid">
+                <div class="bx">
+                    <h1>TTL NEWS</h1>
+                    <p><a onclick="notyet()">preview</a></p>
+                    <p><a onclick="notyet()">event</a></p>
+                </div>
+                <div class="bx">
+                    <h1>TTL MUSIC</h1>
+                    <p id="now"><a href="/album" style="color:black">Album</a></p>
+                    <p><a href="/albumlist" style="color:black">AlbumList</a></p>
+                    <p><a href="https://soundcloud.com/user-934936304" style="color:black">SoundCloud</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="albx" id="albx"></div>
+        </div>
+        <div id="buy">
+            <div class="bcon">
+                <button id="out" onclick="Xout()">X</button>
+                <p>TTL 정규 6집 앨범</p>
+                <h1>TTLAND</h1>
+                <div class="form">
+                    <input class="name" type="text" name="name" placeholder="이름을 입력해주세요">
+                    <input class="num" type="text" name="num" placeholder="학번을 입력해주세요">
+                    <input class="amout" type="number" min="0" name="amout" placeholder="구매 앨범 개수">
+                    <input class="phonenum" type="text" onKeyup="inputPhoneNumber(this);" maxlength="13" name="phonenum" placeholder="전화번호를 입력해주세요">
+                    <div class="checkbox">
+                        <div><input class="check account" type="radio" name="payment"/> 무통장입금</div>
+                        <div><input class="check cash" type="radio" name="payment"/> 현금</div>
+                    </div>
+                    <input class="button" value="주문하기" onclick="success()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function notyet() {
+            alert('아직 제공하지 않는 서비스입니다...');
+        }
+
+        function inputPhoneNumber(obj) {
+            var number = obj.value.replace(/[^0-9]/g, "");
+            var phone = "";
+            if (number.length < 4) {
+                return number;
+            } else if (number.length < 7) {
+                phone += number.substr(0, 3);
+                phone += "-";
+                phone += number.substr(3);
+            } else if (number.length < 11) {
+                phone += number.substr(0, 3);
+                phone += "-";
+                phone += number.substr(3, 3);
+                phone += "-";
+                phone += number.substr(6);
+            } else {
+                phone += number.substr(0, 3);
+                phone += "-";
+                phone += number.substr(3, 4);
+                phone += "-";
+                phone += number.substr(7);
+            }
+            obj.value = phone;
+        }
+        document.getElementById('albx').innerHTML += `
+               <div class="in_l">
+                   <img src="/css/images/ttland.png" onclick="location.href='albumlist.html'">
+                   <p>TTL 정규 7집 앨범</p>
+                   <h1>HOTTEL</h1>
+                   <div class="l_b">
+                           <img src="/css/images/shopping-cart.png">
+                           <p onclick="buyit()">purchase</p>
+                   </div>
+               </div>`;
+        for (var i = 6; i >=6; i--) {
+            document.getElementById('albx').innerHTML += `
+               <div class="in_l">
+                   <img src="/css/images/ttland.png" onclick="location.href='albumlist.html'">
+                   <p>TTL 정규 `+i+`집 앨범</p>
+                   <h1>TTLAND</h1>
+                   <div class="l_b">
+                           <img src="/css/images/shopping-cart.png">
+                           <p onclick="notyet()">purchase</p>
+                   </div>
+               </div>`;
+        }
+
+        function buyit() {
+            document.getElementById('buy').style.display = "block";
+        }
+        function Xout(){
+            document.getElementById('buy').style.display="none";
+        }
+        function success(){
+            if(confirm('주문하시겠습니다?')){
+                console.log("start");
+                const name = document.getElementsByClassName("name")[0].value;
+                const num = document.getElementsByClassName("num")[0].value;
+                const amount = document.getElementsByClassName("amout")[0].value;
+                const phonenum = document.getElementsByClassName("phonenum")[0].value;
+                let payment;
+
+                if(document.getElementsByClassName("account")[0].value == true) {
+                    payment = "무통장입금";
+                } else {
+                    payment = "현금";
+                }
+
+                axios.post("/album/purchase", {
+                    name,
+                    num,
+                    amount,
+                    phonenum,
+                    payment
+                })
+                .then(function({data}) {
+                    if (data == true) {
+                        alert('주문 완료 되었습니다');
+                    } else {
+                        alert("주문에 오류가 발생했습니다. 다시 시도해주세요");
+                    }
+                })
+                
+            }
+            else{
+                alert('주문이 취소 되었습니다');
+            }
+        }
+    </script>
+</body>
+
+</html>
