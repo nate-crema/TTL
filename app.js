@@ -71,7 +71,7 @@ app.use(session({
 
 //mongodb
 
-var reg_model = require('./models/reg_model');
+var pre_model = require('./models/pre_model');
 
 var mongoose = require('mongoose');
 
@@ -81,7 +81,7 @@ db.once('open', function() {
     console.log("Mongodb: connected");
 })
 
-mongoose.connect('mongodb://175.116.44.231:754', { dbName: 'rendercube_beta'});
+mongoose.connect('mongodb://121.170.91.63:754', { dbName: 'TTL_pre'});
 
 //Router
-var router = require('./router')(app, fs, path, crypto, reg_model);
+var router = require('./router')(app, fs, path, crypto, pre_model);
