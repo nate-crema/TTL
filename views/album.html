@@ -25,7 +25,7 @@
                 <div class="bx">
                     <h1>TTL MUSIC</h1>
                     <p id="now"><a href="/album" style="color:black">Album</a></p>
-                    <p><a href="/albumlist" style="color:black">AlbumList</a></p>
+                    <p><a onclick="notyet()">AlbumList</a></p>
                     <p><a href="https://soundcloud.com/user-934936304" style="color:black">SoundCloud</a></p>
                 </div>
             </div>
@@ -84,7 +84,8 @@
         }
         document.getElementById('albx').innerHTML += `
                <div class="in_l">
-                   <img src="/css/images/ttland.png" onclick="location.href='albumlist'">
+                   <img src="/css/images/hotel.jpeg
+                   " onclick="location.href='albumlist'">
                    <p>TTL 정규 7집 앨범</p>
                    <h1>HOTTEL</h1>
                    <div class="l_b">
@@ -92,18 +93,18 @@
                            <p onclick="buyit()">purchase</p>
                    </div>
                </div>`;
-        for (var i = 6; i >=6; i--) {
-            document.getElementById('albx').innerHTML += `
-               <div class="in_l">
-                   <img src="/css/images/ttland.png" onclick="location.href='albumlist'">
-                   <p>TTL 정규 `+i+`집 앨범</p>
-                   <h1>TTLAND</h1>
-                   <div class="l_b">
-                           <img src="/css/images/shopping-cart.png">
-                           <p onclick="notyet()">purchase</p>
-                   </div>
-               </div>`;
-        }
+        // for (var i = 6; i >=6; i--) {
+        //     document.getElementById('albx').innerHTML += `
+        //        <div class="in_l">
+        //            <img src="/css/images/hotel.jpeg" onclick="location.href='albumlist'">
+        //            <p>TTL 정규 `+i+`집 앨범</p>
+        //            <h1>TTLAND</h1>
+        //            <div class="l_b">
+        //                    <img src="/css/images/shopping-cart.png">
+        //                    <p onclick="notyet()">purchase</p>
+        //            </div>
+        //        </div>`;
+        // }
 
         function buyit() {
             document.getElementById('buy').style.display = "block";
