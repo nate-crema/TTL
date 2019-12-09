@@ -88,7 +88,7 @@ db.once('open', function() {
     console.log("Mongodb: connected");
 })
 
-mongoose.connect('mongodb://121.170.91.63', { dbName: 'TTL_pre'});
+mongoose.connect('mongodb://ttl_admin:TTL_ADMIN_00**@121.170.91.63', { dbName: 'TTL_pre'});
 
 //Router
 var router = require('./router')(app, fs, path, crypto, preorder, getIP);
