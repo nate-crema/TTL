@@ -1,26 +1,26 @@
 @font-face {
     font-family: "AppleSDGothicNeoB00";
-    src: url(fonts/AppleSDGothicNeoB.ttf);
+    src: url("./fonts/AppleSDGothicNeoB.ttf");
     font-family: "AppleSDGothicNeoEB00";
-    src: url(fonts/AppleSDGothicNeoEB.ttf);
+    src: url("./fonts/AppleSDGothicNeoEB.ttf");
     font-family: "AppleSDGothicNeoH00";
-    src: url(fonts/AppleSDGothicNeoH.ttf);
+    src: url("./fonts/AppleSDGothicNeoH.ttf");
     font-family: "AppleSDGothicNeoL00";
-    src: url(fonts/AppleSDGothicNeoL.ttf);
+    src: url("./fonts/AppleSDGothicNeoL.ttf");
     font-family: "AppleSDGothicNeoM00";
-    src: url(fonts/AppleSDGothicNeoM.ttf);
+    src: url("./fonts/AppleSDGothicNeoM.ttf");
     font-family: "AppleSDGothicNeoR00";
-    src: url(fonts/AppleSDGothicNeoR.ttf);
+    src: url("./fonts/AppleSDGothicNeoR.ttf");
     font-family: "AppleSDGothicNeoSB00";
-    src: url(fonts/AppleSDGothicNeoSB.ttf);
+    src: url("./fonts/AppleSDGothicNeoSB.ttf");
     font-family: "AppleSDGothicNeoT00";
-    src: url(fonts/AppleSDGothicNeoT.ttf);
+    src: url("./fonts/AppleSDGothicNeoT.ttf");
     font-family: "AppleSDGothicNeoUL00";
-    src: url(fonts/AppleSDGothicNeoUL.ttf);
+    src: url("./fonts/AppleSDGothicNeoUL.ttf");
     font-family: "XHARP Gradient";
-    src: url(fonts/xharp.gradient.otf);
+    src: url("./fonts/xharp.gradient.otf");
     font-family: "XHARP";
-    src: url(fonts/xharp.regular.otf);
+    src: url("./fonts/xharp.regular.otf");
 }
 
 * {
